@@ -66,10 +66,43 @@
   height: 100%;
   z-index: -1;
 }
+
+.admin-bg {
+  position: relative;
+  background-image: url("../../Images/Admin.jpg");
+  height: 980px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+.admin-bg::after {
+  position: absolute;
+  content: "";
+  left: -1px;
+  top: 0px;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 11, 20, 0.28) 28%,
+    rgba(1, 13, 32, 0.69) 69%,
+    #050c1a 100%
+  );
+  opacity: 0.7;
+  height: 100%;
+  z-index: -1;
+}
+
 .focus {
   transition: transform 0.3s;
 }
 
 .focus:hover {
   transform: translateY(-20px);
+}
+
+.form-control::placeholder {
+  color: white;
+  opacity: 0.7;
 }

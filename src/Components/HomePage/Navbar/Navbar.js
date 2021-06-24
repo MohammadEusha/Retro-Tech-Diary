@@ -18,7 +18,7 @@ const Navbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     let display;
     if (loggedInUser) {
-        display = <li style={{ marginLeft: '50px', fontWeight: 'bold' }} className="nav-item text-light pt-2">
+        display = <li className={(isSticky || isCollapsed) ? "nav-item text-danger  pt-2" : "nav-item text-light  pt-2"}>
             {loggedInUser.name}
         </li>
     }
@@ -26,7 +26,7 @@ const Navbar = () => {
     const [isAdmin, setIsAdmin] = useState(false);
     console.log(isAdmin);
     useEffect(() => {
-        fetch('http://localhost:5000/isAdmin', {
+        fetch('https://immense-sierra-08703.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
@@ -45,7 +45,7 @@ const Navbar = () => {
             <div class="container-fluid">
                 <div className="col-md-6">
                     {/* <img className="transaction-area " style={{ height: "50px", }} src={logo} alt="" /> */}
-                    <a className="navbar-brand  h1 text-light" href="#home">Retro Tech Diary</a>
+                    <a className="navbar-brand  h1 text-danger" href="#home">Retro Tech Diary</a>
                 </div>
                 <button onClick={
                     () => setCollapsed(!isCollapsed ? 'show' : null)}
@@ -56,9 +56,8 @@ const Navbar = () => {
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 h5">
 
-                        <li class="nav-item">
-                            {display}
-                        </li>
+                        {display}
+
                         <li class="nav-item">
                             <a class="nav-link text-light" aria-current="page" href="#home">Home</a>
                         </li>
@@ -73,21 +72,6 @@ const Navbar = () => {
                                 <Link style={{ textDecoration: 'none' }} class="nav-link text-light" to="/addBlogs">Admin</Link>
                             </li>
                         }
-                        {/* <li class="nav-item">
-                            <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/checkOut/:name">CheckOut</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/orders">Orders</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/dashboard">Dashboard</Link>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link color" href="#contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/login">LogIn</Link>
-                        </li> */}
                     </ul>
                 </div>
             </div>

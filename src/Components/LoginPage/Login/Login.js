@@ -91,7 +91,7 @@ const Login = () => {
             <Navbar></Navbar>
             <div className="text-center pt-5 text-light">
                 <div>
-                    <h1 className="text-light px-5 mx-5">Welcome To Retro Tech Diary .Please Sign In With Your Google Account To See Your Ordered Services And To Confirm It...!!!!</h1>
+                    <h1 className="text-light px-5 mx-5">Welcome To <span className="text-danger">Retro Tech Diary</span> .Please Sign In With Your Google Account To See Your Ordered Services And To Confirm It...!!!!</h1>
                 </div>
 
                 <div className="row d-flex align-items-center justify-content-center">

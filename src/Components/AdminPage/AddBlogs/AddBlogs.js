@@ -24,7 +24,7 @@ const AddBlogs = () => {
             image: imageURL
         }
 
-        const url = `http://localhost:5000/addBlogs`
+        const url = `https://immense-sierra-08703.herokuapp.com/addBlogs`
         console.log(serviceData)
 
         fetch(url, {
@@ -60,31 +60,31 @@ const AddBlogs = () => {
             });
     }
     return (
-        <div style={{ backgroundColor: "#12161f", height: "980px", color: "white" }} className="pt-5">
+        <div style={{ height: "980px", color: "white" }} className="pt-5 card-bg1">
             <AdminNavbar></AdminNavbar>
             <div className="container mt-5">
                 <div className="text-center pt-5">
-                    <h1>HI <span className="text-danger">{loggedInUser.name}</span>...Add Blogs Details Here ....!!!!</h1>
+                    <h1>HI <span className="text-danger">{loggedInUser.name}</span>...Add Blog Details Here ....!!!!</h1>
                 </div>
                 <form className="row mt-5 m-5" onSubmit={handleSubmit(onSubmit)}>
                     <div className="col-md-6">
                         <label for="title" className="form-label"><h4>Blog Title</h4></label>
-                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Blog Title" name="title" ref={register} className="form-control text-light" />
+                        <input style={{ backgroundColor: "gray" }} placeholder="Write Blog Title" name="title" ref={register} className="form-control text-light" />
                     </div>
                     <div className="col-md-6">
                         <label for="content" className="form-label"><h4>Blog Content</h4></label>
-                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Blog Content" name="content" className="form-control text-light" ref={register} />
+                        <input style={{ backgroundColor: "gray" }} placeholder="Write Blog Content" name="content" className="form-control text-light" ref={register} />
                     </div>
                     <div className="col-md-6 mt-3">
                         <label for="blogLink" className="form-label"><h4>Blog Link</h4></label>
-                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Blog Link" name="blogLink" className="form-control text-light" ref={register} />
+                        <input style={{ backgroundColor: "gray" }} placeholder="Write Blog Link" name="blogLink" className="form-control text-light" ref={register} />
                     </div>
                     <div className="col-md-6 mt-3">
                         <label className="form-label"><h4>Insert Image</h4></label>
-                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Your Name" className="form-control text-light" type="file" onChange={handleImageUpload} id="formFile" />
+                        <input style={{ backgroundColor: "gray" }} placeholder="Write Your Name" className="form-control text-light" type="file" onChange={handleImageUpload} id="formFile" />
                     </div>
                     <div className="col-12 d-grid ">
-                        <button className="mt-4 btn btn-danger btn-lg btn-block" type="submit" ><FontAwesomeIcon icon={faPlusCircle} />  Add Blogs</button>
+                        <button className="mt-4 btn btn-secondary btn-lg btn-block" type="submit" ><FontAwesomeIcon icon={faPlusCircle} />  Add Blogs</button>
                     </div>
                 </form>
             </div>

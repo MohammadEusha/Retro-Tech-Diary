@@ -16,15 +16,15 @@ const Footer = () => {
         { name: "Vintage Tech Content Link" },
     ]
     return (
-        <footer id="contact" className="footer-area clear-both mt-5  h6">
+        <footer id="contact" className="footer-area clear-both mt-5 h6">
             <div className="container pt-5 pb-3">
                 <div className="row py-5">
                     <div className="col-md-6">
                         <div className="d-flex ">
                             {/* <img className="transaction-area" style={{ height: "50px" }} src={logo} alt="" /> */}
-                            <h3 className="text-light fw-bolder">Retro Tech Diary</h3>
+                            <h1 className="text-light display-3">Retro Tech Diary</h1>
                         </div>
-                        <p className="text-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium distinctio velit dignissimos quidem ipsa voluptatum numquam quis cupiditate quo, natus, illum laudantium? Esse eos, facilis tempore temporibus laboriosam odit asperiores?</p>
+                        <h4 className="text-light ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium distinctio velit dignissimos quidem ipsa voluptatum numquam quis cupiditate quo, natus, illum laudantium? Esse eos, facilis tempore temporibus laboriosam odit asperiores?</h4>
                     </div>
                     <FooterCol key={1} menuTitle="Services" menuItems={Blogs} />
                     <FooterCol key={2} menuTitle="Our Address" menuItems={ourAddress}>
@@ -34,13 +34,13 @@ const Footer = () => {
                             <li className="list-inline-item"><a href="//instagram.com"><FontAwesomeIcon className="icon active-icon" icon={faInstagram} /></a></li>
                         </ul>
                         <div className="mt-5 text-white">
-                            <h6>Call now</h6>
-                            <button className="btn btn-brand btn-secondary">+565465164164</button>
+                            <h4>Call now</h4>
+                            <button className="btn btn-brand btn-lg btn-light text-secondary">+565465164164</button>
                         </div>
                     </FooterCol>
                 </div>
                 <div className="copyRight text-center text-light">
-                    <p>Copyright {(new Date()).getFullYear()} All Rights Reserved</p>
+                    <p>Copyright <span className="text-danger"> {(new Date()).getFullYear()}</span> All Rights Reserved</p>
                 </div>
             </div>
         </footer>

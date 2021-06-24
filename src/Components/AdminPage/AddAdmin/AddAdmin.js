@@ -20,7 +20,7 @@ const AddAdmin = () => {
             email: data.email,
         }
 
-        const url = `http://localhost:5000/addAdmin`
+        const url = `https://immense-sierra-08703.herokuapp.com/addAdmin`
         console.log(adminData)
 
         fetch(url, {
@@ -40,7 +40,7 @@ const AddAdmin = () => {
             })
     };
     return (
-        <div style={{ backgroundColor: "#12161f", height: "980px", color: "white" }} className="pt-5">
+        <div style={{ height: "980px", color: "white" }} className="pt-5 card-bg1">
             <AdminNavbar></AdminNavbar>
             <div className="container pt-5">
                 <div className="text-center pt-5">
@@ -49,14 +49,14 @@ const AddAdmin = () => {
                 <form className=" my-5 py-5 row" onSubmit={handleSubmit(onSubmit)}>
                     <div className="col-md-6">
                         <label for="displayName" className="form-label"><h4>Admin Name </h4></label>
-                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Admin Name" name="displayName" ref={register} className="form-control text-light" />
+                        <input style={{ backgroundColor: "gray" }} placeholder="Write Admin Name" name="displayName" ref={register} className="form-control text-light" />
                     </div>
                     <div className="col-md-6">
                         <label for="email" className="form-label"><h4>Admin Email Address</h4></label>
-                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Admin Email Address" name="email" className="form-control text-light" ref={register} />
+                        <input style={{ backgroundColor: "gray" }} placeholder="Write Admin Email Address" name="email" className="form-control text-light" ref={register} />
                     </div>
                     <div className="col-12 d-grid ">
-                        <button className="mt-4  btn btn-danger btn-lg btn-block" type="submit" ><FontAwesomeIcon icon={faPlusCircle} />  Add Admin</button>
+                        <button className="mt-4  btn btn-secondary btn-lg btn-block" type="submit" ><FontAwesomeIcon icon={faPlusCircle} />  Add Admin</button>
                     </div>
                 </form>
             </div>

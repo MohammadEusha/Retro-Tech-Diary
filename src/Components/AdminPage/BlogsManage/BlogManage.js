@@ -10,16 +10,16 @@ const BlogManage = () => {
     const [manageBlogs, setManageBlogs] = useState([])
     useEffect(() => {
 
-        fetch('http://localhost:5000/blogs')
+        fetch('https://immense-sierra-08703.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setManageBlogs(data))
 
     }, [manageBlogs])
     return (
-        <div style={{ backgroundColor: "#12161f", color: "white", height: "980px" }} className="pt-5">
+        <div style={{ backgroundColor: "#12161f", color: "white" }} className="pt-5 card-bg1">
             <AdminNavbar></AdminNavbar>
             <div className="container mt-5">
-                <h1 className="text-center pt-5">HI <span className="text-danger">{loggedInUser.name}</span>...You Have Total {manageBlogs.length} Service ....!!!!!</h1>
+                <h1 className="text-center pt-5">HI <span className="text-danger">{loggedInUser.name}</span>...You Have Total {manageBlogs.length} Blogs ....!!!!!</h1>
                 <div className="row d-flex justify-content-center">
                     {
                         manageBlogs.map(blog => <BlogManageDetails blog={blog}></BlogManageDetails>)

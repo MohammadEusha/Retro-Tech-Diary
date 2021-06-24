@@ -7,7 +7,7 @@ const AdminNavbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     let display;
     if (loggedInUser) {
-        display = <li style={{ marginLeft: '50px', fontWeight: 'bold' }} className="nav-item text-light pt-2">
+        display = <li className="nav-item text-danger fw-bolder pt-2">
             {loggedInUser.name}
         </li>
     }
@@ -18,7 +18,7 @@ const AdminNavbar = () => {
         <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
                 <div className="col-md-6">
-                    <a className="navbar-brand color ms-3 h1" href="#home">Grocery Store</a>
+                    <a className="navbar-brand color ms-3 h1 text-danger" href="#home">Retro Tech Diary</a>
                 </div>
                 <button id="nav-toggle-button" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

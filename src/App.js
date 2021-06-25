@@ -18,6 +18,8 @@ function App() {
 
   const [isAdmin, setIsAdmin] = useState(false);
   console.log(isAdmin);
+
+
   useEffect(() => {
     fetch('https://immense-sierra-08703.herokuapp.com/isAdmin', {
       method: 'POST',
@@ -27,6 +29,8 @@ function App() {
       .then(res => res.json())
       .then(data => setIsAdmin(data));
   }, [loggedInUser.email])
+
+
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>

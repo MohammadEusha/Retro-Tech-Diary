@@ -1,5 +1,4 @@
 import React from 'react';
-import fakedata from "../../Fakedata/fakedata.json"
 const Header = () => {
 
     return (

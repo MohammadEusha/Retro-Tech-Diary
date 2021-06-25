@@ -44,8 +44,7 @@ const Navbar = () => {
         <nav className={(isSticky || isCollapsed) ? "navbar  navbar-expand-lg navbar-dark bg-dark fixed-top" : "navbar  navbar-expand-lg navbar-light  text-dark"}>
             <div class="container-fluid">
                 <div className="col-md-6">
-                    {/* <img className="transaction-area " style={{ height: "50px", }} src={logo} alt="" /> */}
-                    <a className="navbar-brand  h1 text-danger" href="#home">Retro Tech Diary</a>
+                    <a className="navbar-brand text-danger" href="#home"><span className="h3">Retro Tech Diary</span></a>
                 </div>
                 <button onClick={
                     () => setCollapsed(!isCollapsed ? 'show' : null)}
@@ -54,7 +53,7 @@ const Navbar = () => {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 h5">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 h3">
 
                         {display}
 

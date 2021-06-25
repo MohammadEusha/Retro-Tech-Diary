@@ -57,12 +57,12 @@ const Login = () => {
         if (e.target.name === 'email') {
             isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
         }
-        else { <h1>L</h1> }
         if (e.target.name === 'password') {
             const isPasswordValid = e.target.value.length > 6;
             const passwordHasNumber = /\d{1}/.test(e.target.value);
             isFieldValid = isPasswordValid && passwordHasNumber;
         }
+
         if (isFieldValid) {
             const newUserInfo = { ...user };
             newUserInfo[e.target.name] = e.target.value;
@@ -106,17 +106,22 @@ const Login = () => {
                                     </div>
                                     <div className="input-group">
                                         <label for=""><h4>Email</h4></label>
-                                        <input className="text-light" type="text" name="email" onBlur={handleBlur} placeholder="Your Email address" required />
+                                        <input className="text-light" type="text" name="email" onBlur={handleBlur} placeholder="Your Email address" data-bs-toggle="popover" title="Enter A Valid Email Address" required />
                                     </div>
                                     <div className="input-group">
                                         <label for=""><h4>Password</h4></label>
-                                        <input className="text-light" type="password" name="password" onBlur={handleBlur} placeholder="Your Password" required />
+                                        <input className="text-light" type="password" name="password" onBlur={handleBlur} placeholder="Your Password" data-bs-toggle="popover" title="Password length must be greater than 6 and must have at least One Number " required />
                                     </div>
                                     <div className="d-grid">
                                         <input className="btn-lg  btn-block btn-secondary" type="submit" value={newUser ? 'Sign Up' : 'Sign In'} />
                                     </div>
                                     <div >
-                                        <h5>New Here??? Become One Of Us <a className="text-danger" onClick={() => setNewUser(!newUser)} href="#">Sign Up</a></h5>
+                                        {/* <h5>New Here??? Become One Of Us <a className="text-danger" onClick={() => setNewUser(!newUser)} href="#">{newUser ? 'Sign In' : 'Sign Up'}</a> */}
+
+                                        {newUser ?
+                                            <h5>Signed Up Already??? Ok Then <a className="text-danger" onClick={() => setNewUser(!newUser)} href="#">Sign In</a></h5>
+                                            :
+                                            <h5>New Here??? Become One Of Us <a className="text-danger" onClick={() => setNewUser(!newUser)} href="#">Sign Up</a></h5>}
                                     </div>
                                 </form>
 

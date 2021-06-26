@@ -47,11 +47,11 @@ const AddAdmin = () => {
                     <h1>HI <span className="text-danger">{loggedInUser.name}</span> ...Add Admin Here ....!!!!</h1>
                 </div>
                 <form className=" my-5 py-5 row" onSubmit={handleSubmit(onSubmit)}>
-                    <div className="col-md-6">
+                    <div className="col-md-6 py-3">
                         <label for="displayName" className="form-label"><h4>Admin Name </h4></label>
                         <input style={{ backgroundColor: "gray" }} placeholder="Write Admin Name" name="displayName" ref={register} className="form-control text-light" />
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6 py-3">
                         <label for="email" className="form-label"><h4>Admin Email Address</h4></label>
                         <input style={{ backgroundColor: "gray" }} placeholder="Write Admin Email Address" name="email" className="form-control text-light" ref={register} />
                     </div>

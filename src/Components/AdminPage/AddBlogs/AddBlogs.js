@@ -67,19 +67,19 @@ const AddBlogs = () => {
                     <h1>HI <span className="text-danger">{loggedInUser.name}</span>...Add Blog Details Here ....!!!!</h1>
                 </div>
                 <form className="row mt-5 m-5" onSubmit={handleSubmit(onSubmit)}>
-                    <div className="col-md-6">
+                    <div className="col-md-6 py-3">
                         <label for="title" className="form-label"><h4>Blog Title</h4></label>
                         <input style={{ backgroundColor: "gray" }} placeholder="Write Blog Title" name="title" ref={register} className="form-control text-light" />
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6 py-3">
                         <label for="content" className="form-label"><h4>Blog Content</h4></label>
                         <input style={{ backgroundColor: "gray" }} placeholder="Write Blog Content" name="content" className="form-control text-light" ref={register} />
                     </div>
-                    <div className="col-md-6 mt-3">
+                    <div className="col-md-6 py-3">
                         <label for="blogLink" className="form-label"><h4>Blog Link</h4></label>
                         <input style={{ backgroundColor: "gray" }} placeholder="Write Blog Link" name="blogLink" className="form-control text-light" ref={register} />
                     </div>
-                    <div className="col-md-6 mt-3">
+                    <div className="col-md-6 py-3">
                         <label className="form-label"><h4>Insert Image</h4></label>
                         <input style={{ backgroundColor: "gray" }} placeholder="Write Your Name" className="form-control text-light" type="file" onChange={handleImageUpload} id="formFile" />
                     </div>

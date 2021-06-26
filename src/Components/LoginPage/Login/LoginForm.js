@@ -22,24 +22,6 @@ export const handleGoogleSignIn = () => {
         })
 }
 
-export const handleSignOut = () => {
-    return firebase.auth().signOut()
-        .then(res => {
-            const signedOutUser = {
-                isSignedIn: false,
-                name: '',
-                email: '',
-                photo: '',
-                error: '',
-                success: false
-            }
-            return signedOutUser;
-        }).catch(err => {
-            console.log(err)
-            console.log(err.message)
-        });
-}
-
 export const createUserWithEmailAndPassword = (name, email, password) => {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(res => {

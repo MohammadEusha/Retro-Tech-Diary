@@ -16,7 +16,7 @@ const BlogManage = () => {
 
     }, [manageBlogs])
     return (
-        <div style={{ backgroundColor: "#12161f", color: "white" }} className="pt-5 card-bg1">
+        <div style={{ backgroundColor: "#12161f", color: "white" }} className="pt-5 card-bg1 p-3">
             <AdminNavbar></AdminNavbar>
             <div className="container mt-5">
                 <h1 className="text-center pt-5">HI <span className="text-danger">{loggedInUser.name}</span>...You Have Total {manageBlogs.length} Blogs ....!!!!!</h1>

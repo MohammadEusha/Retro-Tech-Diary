@@ -21,7 +21,6 @@ const Footer = () => {
                 <div className="row py-5">
                     <div className="col-md-6">
                         <div className="d-flex ">
-                            {/* <img className="transaction-area" style={{ height: "50px" }} src={logo} alt="" /> */}
                             <h1 className="text-light display-3">Retro Tech Diary</h1>
                         </div>
                         <h4 className="text-light ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium distinctio velit dignissimos quidem ipsa voluptatum numquam quis cupiditate quo, natus, illum laudantium? Esse eos, facilis tempore temporibus laboriosam odit asperiores?</h4>

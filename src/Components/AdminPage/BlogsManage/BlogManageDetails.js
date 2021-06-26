@@ -4,7 +4,7 @@ import React from 'react';
 import Swal from 'sweetalert2';
 
 const BlogManageDetails = (props) => {
-    const { _id, title, content, image, blogLink } = props.blog
+    const { _id, title, content } = props.blog
     const handleDelete = (id) => {
         fetch(`https://immense-sierra-08703.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
@@ -23,8 +23,8 @@ const BlogManageDetails = (props) => {
         console.log(id)
     }
     return (
-        <ul className="list-group col-md-3 focus mt-3 m-1 d-grid h5">
-            <li className="list-group-item list-group-item-dark"><span className="fw-bolder text-dark">Blog Title : {title} </span></li>
+        <ul className="list-group col-md-3 focus mt-3 m-2 d-grid h5">
+            <li className="list-group-item list-group-item-dark "><span className="fw-bolder text-dark">Blog Title : {title} </span></li>
             <li className="list-group-item "><span className="fw-bolder text-dark">Blog Content : {content} </span> </li>
             <li onClick={() => handleDelete(_id)} className="list-group-item d-grid">
                 <span className="btn btn-outline-danger btn-block fw-bolder text-dark"><FontAwesomeIcon icon={faTrashAlt} />  Delete Blogs</span>

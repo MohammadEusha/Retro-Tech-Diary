@@ -15,7 +15,7 @@ const Blog = () => {
 
 
     return (
-        <div id="blog" className="mt-5 pt-2  pb-2">
+        <div id="blog" className="mt-5 pt-2 p-5 pb-2">
             <Navbar></Navbar>
             <h1 className="text-center text-light display-2 mt-5 pt-5">Blogs About Retro Tech</h1>
             <div className="row d-flex justify-content-center mb-5 pb-5">

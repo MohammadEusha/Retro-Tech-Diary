@@ -43,7 +43,7 @@ const Navbar = () => {
     return (
         <nav className={(isSticky || isCollapsed) ? "navbar  navbar-expand-lg navbar-dark bg-dark fixed-top" : "navbar  navbar-expand-lg navbar-light  text-dark"}>
             <div class="container-fluid">
-                <div className="col-md-6">
+                <div className=" px-5">
                     <a className="navbar-brand text-danger" href="#home"><span className="h3">Retro Tech Diary</span></a>
                 </div>
                 <button onClick={
@@ -52,7 +52,7 @@ const Navbar = () => {
                     class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarText">
+                <div class="collapse navbar-collapse px-5" id="navbarText">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 h3">
 
                         {display}
